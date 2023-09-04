@@ -19,14 +19,18 @@ namespace FleetManagement_Backend.Controllers
             this.booking = booking;
         }
 
+
+        // get a booking record by providing BookingId
         [HttpGet("byBookingId/{id}")]
         public async Task<ActionResult<Booking>> GetBookingById(int id) 
         {
             var booking_list = await booking.GetBookingById(id);
 
-            return booking == null ? NotFound() : booking_list;
+            return booking_list == null ? NotFound() : booking_list;
         }
 
+
+        // get a booking record by providing Customer Mobile number
         [HttpGet("by-phone/{mobileno}")]
 
         public async Task<ActionResult<Booking>> GetBookingByPhoneNo(string mobileno) 
@@ -36,6 +40,8 @@ namespace FleetManagement_Backend.Controllers
             return booking_list == null ? NotFound() : booking_list;
         }
 
+
+        // get a booking record by providing Customer Email-id
         [HttpGet("by-email/{email}")]
         public async Task<ActionResult<Booking>> GetBookingByEmail(string email)
         {
@@ -43,10 +49,12 @@ namespace FleetManagement_Backend.Controllers
             return booking_list == null ? NotFound() : booking_list;
         }
 
+
+        // Entering Booking data in the database
         [HttpPost]
         public async Task<ActionResult<Booking>> PostBooking(Booking booking_post) 
         {
-            await booking.SaveInBooking(booking_post);
+           await booking.SaveInBooking(booking_post);
 
             return CreatedAtAction("GetBookingById", new { id = booking_post.BookingId }, booking_post);
         }

@@ -21,7 +21,9 @@ namespace FleetManagement_Backend
             builder.Services.AddTransient<IHubInterface, SQLHubRepository>();
             builder.Services.AddTransient<ICarInterface, SQLCarRepository>();
             builder.Services.AddTransient<ICarCategoryInterface, SQLCarCategoryRepository>();
-            builder.Services.AddTransient<IBookingInterface, SQLBookingRepository>();   
+            builder.Services.AddTransient<IBookingInterface, SQLBookingRepository>();
+            builder.Services.AddTransient<IBillingInterface, SQLBillingRepository>();
+
 
 
             var configure_builder = builder.Configuration.GetConnectionString("PROJECT_DB");

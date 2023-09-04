@@ -18,7 +18,7 @@ namespace FleetManagement_Backend.Models
 
         [ForeignKey("City")]
         public int? CityId { get; set; }
-
+        //why virtual
         public virtual City? City { get; set; }
 
         [ForeignKey("Airport")]

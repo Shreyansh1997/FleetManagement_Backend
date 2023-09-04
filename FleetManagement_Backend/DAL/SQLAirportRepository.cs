@@ -13,7 +13,7 @@ namespace FleetManagement_Backend.DAL
             _appDbContext = appDbContext;
         }
 
-        public async Task<ActionResult<IEnumerable<Airport>>> GetAllAirport()
+        public async Task<ActionResult<IEnumerable<Airport>>?> GetAllAirport()
         {
             if (_appDbContext.Airport == null)
             {

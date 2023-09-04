@@ -18,10 +18,12 @@ namespace FleetManagement_Backend.Controllers
 
         public StateController(IStateInterface state)
         {
-            _state = state;
+            _state = state; 
         }
 
         // GET: api/<StateController>
+
+        //Get List of All the States
         [HttpGet]
         public async Task<ActionResult<IEnumerable<State>>> GetState()
         {
@@ -33,7 +35,9 @@ namespace FleetManagement_Backend.Controllers
             return await _state.GetAllState();
         }
 
-        [HttpGet("{id:int}")]
+
+        // Get a single record by providing State id
+        [HttpGet("{id:int}")] // api/State/
         public async Task<ActionResult<State>> GetStateById(int id)
         {
             var state = await _state.GetState(id);

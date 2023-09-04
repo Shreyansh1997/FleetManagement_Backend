@@ -17,6 +17,8 @@ namespace FleetManagement_Backend.Controllers
             airportInterface = airportinterface;
         }
 
+
+        // get list of all airports
         // GET: api/<AirportController>
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Airport>>?> GetAirport()
@@ -29,6 +31,8 @@ namespace FleetManagement_Backend.Controllers
             return await airportInterface.GetAllAirport();
         }
 
+
+        // get a single record of airport by providing AirportId
         [HttpGet("{id:int}")]
         public async Task<ActionResult<Airport>> GetAirportById(int id)
         {

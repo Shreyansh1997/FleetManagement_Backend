@@ -17,5 +17,6 @@ namespace FleetManagement_Backend.Models
         public DbSet<Booking> Booking { get; set; }
         public DbSet<AddOn> AddOn { get; set; }
         public DbSet<Users> Users { get; set; }
+        public DbSet<Billing> Billings { get; set; }
     }
 }

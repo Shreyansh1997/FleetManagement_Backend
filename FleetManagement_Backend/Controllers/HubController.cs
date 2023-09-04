@@ -18,8 +18,9 @@ namespace FleetManagement_Backend.Controllers
         }
 
         // GET: api/<HubController>
+        // Get list of all Hubs
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Hubs>>> GetAllHubs()
+        public async Task<ActionResult<IEnumerable<Hubs>>?> GetAllHubs()
         {
             if (await _hub.GetAllHub() == null)
             {
@@ -29,6 +30,8 @@ namespace FleetManagement_Backend.Controllers
             return await _hub.GetAllHub();
         }
 
+
+        // Get List of Hubs by providing City Id
         [HttpGet("city/{cityId:int}")]
         public async Task<ActionResult<IEnumerable<Hubs>>> GetHubsByCityId(int cityId)
         {
@@ -37,6 +40,7 @@ namespace FleetManagement_Backend.Controllers
             return hub == null ? NotFound() : hub;
         }
 
+        // Get list of Hubs by providing AirportId
         [HttpGet("airport/{airportId:int}")]
         public async Task<ActionResult<Hubs>> GetHubByAirportId(int airportId) 
         {

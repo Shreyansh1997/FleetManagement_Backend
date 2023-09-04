@@ -20,6 +20,8 @@ namespace FleetManagement_Backend.Controllers
             _cityInterface = cityInterface;
         }
 
+
+        // Get List of City by providing state id
         [HttpGet("{state_id:int}")]
         public async Task<ActionResult<IEnumerable<City>>> GetCitiesByStateId(int state_id)
         {
