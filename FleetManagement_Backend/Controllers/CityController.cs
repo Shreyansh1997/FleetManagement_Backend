@@ -1,10 +1,10 @@
-﻿using FleetManagement_Backend.DAL;
-using FleetManagement_Backend.Models;
+﻿using FleetManagement_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.AspNetCore.Mvc;
 using NuGet.Protocol.Core.Types;
 using System.Collections;
 using Microsoft.AspNetCore.Cors;
+using FleetManagement_Backend.DAL.CityComponent;
 
 namespace FleetManagement_Backend.Controllers
 {

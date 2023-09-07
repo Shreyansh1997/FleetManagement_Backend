@@ -38,19 +38,19 @@ namespace FleetManagement_Backend.Models
             public int? IsEmployee { get; set; }
 
             // Foreign Key for State
-            public int StateId { get; set; }
+            public int? StateId { get; set; }
             [ForeignKey("StateId")]
-            public virtual State State { get; set; } // 'virtual' keyword for lazy loading in EF Core
+            public virtual State? State { get; set; } // 'virtual' keyword for lazy loading in EF Core
 
             // Foreign Key for City
-            public int CityId { get; set; }
+            public int? CityId { get; set; }
             [ForeignKey("CityId")]
-            public virtual City City { get; set; }
+            public virtual City? City { get; set; }
 
             // Foreign Key for Hubs
-            public int HubId { get; set; }
+            public int? HubId { get; set; }
             [ForeignKey("HubId")]
-            public virtual Hubs Hubs { get; set; } // Note: Ideally, a single hub should probably be named "Hub" instead of "Hubs".
+            public virtual Hubs? Hubs { get; set; } // Note: Ideally, a single hub should probably be named "Hub" instead of "Hubs".
         }
     }
 

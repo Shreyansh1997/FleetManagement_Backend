@@ -3,7 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Net;
 
-namespace FleetManagement_Backend.DAL
+namespace FleetManagement_Backend.DAL.CarComponent
 {
     public class SQLCityRepository : ICityInterface
     {

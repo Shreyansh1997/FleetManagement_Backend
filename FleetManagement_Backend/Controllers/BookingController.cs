@@ -1,4 +1,4 @@
-﻿using FleetManagement_Backend.DAL;
+﻿using FleetManagement_Backend.DAL.BookingComponent;
 using FleetManagement_Backend.Models;
 using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Http;

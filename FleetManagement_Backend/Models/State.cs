@@ -7,8 +7,9 @@ namespace FleetManagement_Backend.Models
     {
         [Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int? StateId { get; set; }
+        public int StateId { get; set; }
 
+        //[Column("State_Name")]
         public string? StateName { get; set; }
         
         public ICollection<City>? Cities { get; set; }

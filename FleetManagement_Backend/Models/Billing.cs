@@ -29,11 +29,11 @@ namespace FleetManagement_Backend.Models
         public int? BookingId { get; set; }
         public virtual Booking? Booking { get; set; }
 
-        [ForeignKey("PickupHub")]
+        [ForeignKey("Hubs")]
         public int? PickupHubId { get; set; }
         public virtual Hubs? PickupHub { get; set; }
 
-        [ForeignKey("DropHub")]
+        [ForeignKey("Hubs")]
         public int? DropHubId { get; set; }
         public virtual Hubs? DropHub { get; set; }
 

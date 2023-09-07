@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace FleetManagement_Backend.DAL
+namespace FleetManagement_Backend.DAL.AirportComponent
 {
     public class SQLAirportRepository : IAirportInterface
     {

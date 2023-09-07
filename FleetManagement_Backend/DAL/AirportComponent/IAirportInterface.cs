@@ -1,7 +1,7 @@
 ﻿using FleetManagement_Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FleetManagement_Backend.DAL
+namespace FleetManagement_Backend.DAL.AirportComponent
 {
     public interface IAirportInterface
     {

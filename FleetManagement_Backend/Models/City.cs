@@ -14,7 +14,7 @@ namespace FleetManagement_Backend.Models
         [ForeignKey("State")]
         public int? StateId { get; set; }
 
-        public virtual State? State { get; set; }
+        public virtual State? State { get; set; } 
 
         public virtual ICollection<Hubs>? Hubs { get; set; }
         public virtual ICollection<Booking>? Bookings { get; set; }

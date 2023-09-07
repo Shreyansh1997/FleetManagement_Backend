@@ -1,7 +1,7 @@
 ﻿using FleetManagement_Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FleetManagement_Backend.DAL
+namespace FleetManagement_Backend.DAL.BillingComponent
 {
     public interface IBillingInterface
     {
@@ -13,7 +13,6 @@ namespace FleetManagement_Backend.DAL
 
         Task<ActionResult<Billing>?> SaveBilling(Billing billing);
 
-
-
+        Task<ActionResult<Billing>?> GetBillingByUserEmailId(String userEmailId);
     }
 }

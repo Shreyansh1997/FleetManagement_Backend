@@ -31,7 +31,7 @@ namespace FleetManagement_Backend.DAL
         public async Task<ActionResult<Users>?> GetUsersByEmailIdAndPassword(string emailid, string password)
         {
             var user = await _context.Users
-                  .Where(u => u.EmailId == emailid && u.Password == password)
+                  .Where(u => u.EmailId == emailid && u.Password == password && u.IsEmployee == 0)
                   .FirstOrDefaultAsync();
 
             if (user == null)
@@ -39,6 +39,22 @@ namespace FleetManagement_Backend.DAL
                 return null;
             }
             return user;
+        }
+
+        public async Task<ActionResult<Users>> GetUserById(int id)
+        {
+            if (_context.Users == null)
+            {
+                return null;
+            }
+
+            var user_list = await _context.Users.FindAsync(id);
+            if (user_list == null)
+            {
+                return null;
+            }
+            return user_list;
+
         }
 
         public async Task<ActionResult<Users>? >PostUser(Users user)

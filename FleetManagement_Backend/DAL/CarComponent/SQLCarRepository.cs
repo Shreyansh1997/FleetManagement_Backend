@@ -2,13 +2,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace FleetManagement_Backend.DAL
+namespace FleetManagement_Backend.DAL.CarComponent
 {
     public class SQLCarRepository : ICarInterface
     {
         private readonly AppDbContext _appDbContext;
 
-        public SQLCarRepository(AppDbContext appDbContext) 
+        public SQLCarRepository(AppDbContext appDbContext)
         {
             _appDbContext = appDbContext;
         }
@@ -29,13 +29,13 @@ namespace FleetManagement_Backend.DAL
         {
             var cars = await _appDbContext.Car.Where(c => c.HubId == hubId).ToListAsync();
 
-            if (cars == null || cars.Count == 0) 
+            if (cars == null || cars.Count == 0)
             {
                 return null;
             }
 
             return new ActionResult<IEnumerable<Car>>(cars);
-            
+
             //throw new NotImplementedException();
         }
     }

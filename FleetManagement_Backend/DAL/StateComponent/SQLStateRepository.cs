@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
-namespace FleetManagement_Backend.DAL
+namespace FleetManagement_Backend.DAL.StateComponent
 {
     public class SQLStateRepository : IStateInterface
     {
@@ -13,7 +13,7 @@ namespace FleetManagement_Backend.DAL
             _appDbContext = appDbContext;
         }
 
-       public async Task<ActionResult<IEnumerable<State>>> GetAllState()
+        public async Task<ActionResult<IEnumerable<State>>> GetAllState()
         {
             if (_appDbContext.State == null)
             {

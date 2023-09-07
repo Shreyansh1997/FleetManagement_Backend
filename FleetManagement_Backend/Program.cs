@@ -1,5 +1,14 @@
 
 using FleetManagement_Backend.DAL;
+using FleetManagement_Backend.DAL.AirportComponent;
+using FleetManagement_Backend.DAL.BillingComponent;
+using FleetManagement_Backend.DAL.BookingComponent;
+using FleetManagement_Backend.DAL.CarCategoryComponent;
+using FleetManagement_Backend.DAL.CarComponent;
+using FleetManagement_Backend.DAL.CityComponent;
+using FleetManagement_Backend.DAL.HubComponent;
+using FleetManagement_Backend.DAL.StateComponent;
+using FleetManagement_Backend.DAL.UserComponent;
 using FleetManagement_Backend.Models;
 using Microsoft.EntityFrameworkCore;
 
@@ -23,6 +32,7 @@ namespace FleetManagement_Backend
             builder.Services.AddTransient<ICarCategoryInterface, SQLCarCategoryRepository>();
             builder.Services.AddTransient<IBookingInterface, SQLBookingRepository>();
             builder.Services.AddTransient<IBillingInterface, SQLBillingRepository>();
+            builder.Services.AddTransient<IUsersInterface, SQLUsersRepository>();
 
 
 

@@ -1,7 +1,7 @@
 ﻿using FleetManagement_Backend.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FleetManagement_Backend.DAL
+namespace FleetManagement_Backend.DAL.StateComponent
 {
     public interface IStateInterface
     {
@@ -9,5 +9,5 @@ namespace FleetManagement_Backend.DAL
 
         Task<ActionResult<State>?> GetState(int Id);
     }
-    
+
 }
